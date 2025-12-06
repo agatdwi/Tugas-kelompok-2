@@ -42,19 +42,19 @@ class KeranjangBelanja:
 
     def tambah_produk(self, produk: Produk):
         self.item.append(produk)
-        print(f"✔ {produk.nama} berhasil ditambahkan!")
+        print(f"{produk.nama} berhasil ditambahkan!")
 
     def hapus_produk(self, nama_produk: str):
         for produk in self.item:
             if produk.nama.lower() == nama_produk.lower():
                 self.item.remove(produk)
-                print(f"✘ {produk.nama} berhasil dihapus!")
+                print(f"produk.nama} berhasil dihapus!")
                 return
         print("⚠ Produk tidak ditemukan.")
 
     def tampilkan_keranjang(self):
         if not self.item:
-            print("🛒 Keranjang masih kosong.")
+            print("Keranjang masih kosong.")
             return
 
         print("\n=== Isi Keranjang ===")
@@ -64,7 +64,7 @@ class KeranjangBelanja:
 
     def hitung_total(self):
         total = sum([p.harga for p in self.item])
-        print(f"💰 Total Belanja: Rp{total}")
+        print(f"Total Belanja: Rp{total}")
         return total
 
 
@@ -100,9 +100,9 @@ def main():
                 if produk:
                     keranjang.tambah_produk(produk)
                 else:
-                    print("⚠ Nomor produk tidak valid.")
+                    print("Nomor produk tidak valid.")
             except ValueError:
-                print("⚠ Harus angka!")
+                print("Harus angka!")
 
         elif pilihan == "3":
             nama = input("Nama produk yang mau dihapus: ")
@@ -115,11 +115,11 @@ def main():
             keranjang.hitung_total()
 
         elif pilihan == "6":
-            print("👋 Makasih sudah belanja! Sampai ketemu lagi!")
+            print("Terimakasih sudah belanja! Sampai ketemu lagi!")
             break
 
         else:
-            print("⚠ Pilihan salah!")
+            print("Pilihan salah!")
 
 
 if __name__ == "__main__":
