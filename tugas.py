@@ -48,9 +48,9 @@ class KeranjangBelanja:
         for produk in self.item:
             if produk.nama.lower() == nama_produk.lower():
                 self.item.remove(produk)
-                print(f"produk.nama} berhasil dihapus!")
+                print(f"{produk.nama} berhasil dihapus!")
                 return
-        print("⚠ Produk tidak ditemukan.")
+        print("Produk tidak ditemukan.")
 
     def tampilkan_keranjang(self):
         if not self.item:
