@@ -9,7 +9,7 @@ class Produk:
         return f"{self.nama} - Rp{self.harga}"
 
 
-# Class toko: tempat nyimpen stok produk yang *bisa dibeli*
+# Class toko: tempat nyimpen stok produk yang bisa dibeli
 class Toko:
     def __init__(self):
         # list produk yang tersedia — ini bisa dikembangin jadi ambil dari database
